@@ -51,6 +51,11 @@ how to install this tool:
 
 7 : BOOOOOOMM 
 
+### Hints
+
+If you need to stop the scheduled task and back to your default identity you can use the command
+```anonym8 stop```
+
 Inspired by:
 
 https://github.com/HiroshiManRise/anonym8
