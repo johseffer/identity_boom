@@ -19,7 +19,7 @@ how to install this tools :
 
 ![image](https://user-images.githubusercontent.com/25435217/235185135-a8dd9a72-4ffa-41cb-bbed-9d4478c8fd24.png)
 
-![image](https://user-images.githubusercontent.com/25435217/235186254-7dbaaa4d-11f2-4939-8336-c6900e9e78fe.png)
+![image](https://user-images.githubusercontent.com/25435217/235193336-f8f18fa7-2b81-4f29-a227-9be407bae925.png)
 
 5: type time to change IP and macaddress
 
