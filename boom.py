@@ -7,6 +7,7 @@ import subprocess
 print('[!] apt update running...')
 subprocess.check_output('sudo apt update',shell=True)
 print('[!] apt updated succesfully')
+
 try:
     check_net_tools = subprocess.check_output('dpkg -s net-tools', shell=True)
     if str('install ok installed') in str(check_net_tools):
@@ -15,6 +16,15 @@ except subprocess.CalledProcessError:
     print('[+] net-tools not installed. installing...')    
     subprocess.check_output('sudo apt install net-tools -y', shell=True)
     print('[!] net-tools installed succesfully')
+    
+try:
+    check_macchanger = subprocess.check_output('dpkg -s macchanger', shell=True)
+    if str('install ok installed') in str(check_macchanger):
+        pass
+except subprocess.CalledProcessError:
+    print('[+] macchanger not installed. installing...')    
+    subprocess.check_output('sudo apt install macchanger -y', shell=True)
+    print('[!] macchanger installed succesfully')
 
 try:
     check_iptables = subprocess.check_output('dpkg -s iptables', shell=True)
@@ -99,9 +109,9 @@ if int(lin) ==int(0):
 			change()
 		except KeyboardInterrupt:
 
+		 	os.system("anonym8 start")
 		 	print('\nidentity boom is closed ')
 		 	quit()
-
 else:
 	for i in range(int(lin)):
 		    time.sleep(int(x))
