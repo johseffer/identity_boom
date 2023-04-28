@@ -4,8 +4,9 @@ import time
 import os
 import subprocess
 
+print('[!] apt update running...')
 subprocess.check_output('sudo apt update',shell=True)
-
+print('[!] apt updated succesfully')
 try:
     check_net_tools = subprocess.check_output('dpkg -s net-tools', shell=True)
     if str('install ok installed') in str(check_net_tools):
