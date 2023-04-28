@@ -6,4 +6,4 @@ cd anonym8
 
 chmod +x INSTALL.sh
 
-bash INSTALL.sh
+sudo bash INSTALL.sh

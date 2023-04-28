@@ -5,12 +5,21 @@ import os
 import subprocess
 
 try:
+    check_net_tools = subprocess.check_output('dpkg -s net-tools', shell=True)
+    if str('install ok installed') in str(check_net_tools):
+        pass
+except subprocess.CalledProcessError:
+    print('[+] net-tools not installed')
+    subprocess.check_output('sudo apt update',shell=True)
+    subprocess.check_output('sudo apt install net-tools -y', shell=True)
+    print('[!] net-tools installed succesfully')
+
+try:
     check_pip3 = subprocess.check_output('dpkg -s python3-pip', shell=True)
     if str('install ok installed') in str(check_pip3):
         pass
 except subprocess.CalledProcessError:
     print('[+] pip3 not installed')
-    subprocess.check_output('sudo apt update',shell=True)
     subprocess.check_output('sudo apt install python3-pip -y', shell=True)
     print('[!] pip3 installed succesfully')
 
@@ -35,16 +44,13 @@ try:
     check_anonym8 = subprocess.check_output('which anonym8', shell=True)
     
     if check_anonym8 == 'anonym8 not found':
-        print('[+] anonym8 is not installed !')
-        subprocess.check_output('git clone https://github.com/HiroshiManRise/anonym8',shell=True)
-        subprocess.check_output('chmod +x ./anonym8/INSTALL.sh',shell=True)
-        subprocess.check_output('bash install_anonym8.sh',shell=True)
+        print('[+] anonym8 is not installed !')        
+        subprocess.check_output('sudo bash install_anonym8.sh',shell=True)
         print('[!] anonym8 is installed succesfully ')    
     
 except subprocess.CalledProcessError:
     print('[+] anonym8 is not installed !')
-    subprocess.check_output('git clone https://github.com/HiroshiManRise/anonym8',shell=True)
-    subprocess.check_output('chmod +x ./anonym8/INSTALL.sh',shell=True)
+    subprocess.check_output('sudo bash install_anonym8.sh',shell=True)
     print('[!] anonym8 is installed succesfully ') 
 
 os.system("clear")
