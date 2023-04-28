@@ -67,7 +67,6 @@ from \033[1;40;31m http://johseffer.com.br/\n''')
 
 os.system("service tor start")
 os.system("anonym8 start")
-os.system("anonym8 start_polipo")
 
 time.sleep(3)
 print("\033[1;32;40m change your  SOCKES to 127.0.0.1:9050 \n")
