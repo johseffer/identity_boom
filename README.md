@@ -15,6 +15,7 @@ Tor Based tool that automatically change your identity each x time using tor  so
 * pip3
 * python requests
 * tor
+* anonym8
 
 how to install this tool:
 
