@@ -38,6 +38,7 @@ try:
         print('[+] anonym8 is not installed !')
         subprocess.check_output('git clone https://github.com/HiroshiManRise/anonym8',shell=True)
         subprocess.check_output('chmod +x ./anonym8/INSTALL.sh',shell=True)
+        subprocess.check_output('bash install_anonym8.sh',shell=True)
         print('[!] anonym8 is installed succesfully ')    
     
 except subprocess.CalledProcessError:
