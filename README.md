@@ -3,7 +3,20 @@
 # Identity BOOM @ 1.0
 Tor Based tool that automatically change your identity each x time using tor  sock5
 
-how to install this tools :
+### requirements: 
+
+* git
+* python 3
+
+### automatically installed:
+* net-tools
+* iptables
+* macchanger
+* pip3
+* python requests
+* tor
+
+how to install this tool:
 
 1: git clone https://github.com/johseffer/identity_boom.git
 
